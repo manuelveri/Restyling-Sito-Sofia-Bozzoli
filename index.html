@@ -1,0 +1,981 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="Scopri come diventare un Social Media Manager freelance con Sofia Bozzoli. Impara a monetizzare le tue competenze online e costruisci un lavoro indipendente." name="description"/>
+<meta content="social media manager, freelance, masterclass, lavoro online, Sofia Bozzoli" name="keywords"/>
+<meta content="Sofia Bozzoli" name="author"/>
+<title>Sofia Bozzoli – Social Media Manager</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&amp;display=swap" rel="stylesheet"/>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; scroll-behavior: smooth; }
+body {
+  font-family: 'Montserrat', sans-serif;
+  background: #fdfdfd;
+  color: #333;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+header {
+  background: #ffffff;
+  position: sticky;
+  top: 0;
+  width: 100%;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  z-index: 1000;
+}
+header .brand {
+  margin-left: 2rem;
+  font-weight: 800;
+  font-size: 1.2rem;
+}
+header nav {
+  flex: 1;
+  text-align: center;
+}
+header nav a {
+  margin: 0 1rem;
+  text-decoration: none;
+  color: #444;
+  font-weight: 600;
+}
+.hero {
+  padding: 4rem 2rem;
+  text-align: center;
+  background: linear-gradient(to bottom right, #f5f7fa, #e8edf3);
+  animation: fadeIn 1.5s ease;
+  width: 100%;
+  max-width: none;
+}
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.hero h1 {
+  font-size: 2.8rem;
+  margin-bottom: 1rem;
+}
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+.hero button {
+  color: white;
+  border: none;
+  padding: 0.9rem 2rem;
+  font-size: 1rem;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+.hero button:hover {
+  transform: scale(1.05);
+}
+section {
+  padding: 4rem 2rem;
+  max-width: 1000px;
+  margin: auto;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.6s ease;
+}
+section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+.section-title {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.form-box {
+  background: #ffffff;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+  max-width: 500px;
+  margin: 2rem auto;
+}
+.form-box input, .form-box button {
+  width: 100%;
+  padding: 0.8rem;
+  margin: 0.5rem 0;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+.form-box button {
+  color: white;
+  border: none;
+  border-radius: 50px;
+  transition: background 0.3s;
+}
+.form-box button:hover {
+}
+.form-box .privacy {
+  display: flex;
+  align-items: center;
+  font-size: 0.9rem;
+  margin-top: 1rem;
+}
+.about-flex {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  align-items: center;
+  justify-content: center;
+}
+.about-img {
+  flex: 1 1 300px;
+  text-align: center;
+}
+.about-img img {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 20px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+.about-text {
+  flex: 1 1 400px;
+}
+
+footer {
+  text-align: center;
+  padding: 2rem;
+  background: #f1f1f1;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+  .hero h1 { font-size: 2rem; }
+  .form-box { padding: 1rem; }
+}
+
+.achievements-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+.achievement-card {
+  background: #ffffff;
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  text-align: center;
+  transition: transform 0.3s;
+}
+.achievement-card:hover {
+  transform: translateY(-10px);
+}
+.achievement-icon {
+  font-size: 2rem;
+  display: block;
+  margin-bottom: 0.75rem;
+}
+
+.hero {
+  width: 100%;
+  max-width: 100%;
+  background: linear-gradient(to bottom right, #f5f7fa, #e8edf3);
+  padding: 4rem 0;
+}
+
+.hero .container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  text-align: center;
+}
+
+hr {
+  border: none;
+  height: 1px;
+  background: linear-gradient(to right, transparent, #ccc, transparent);
+  margin: 2rem 0;
+}
+
+.section-divider {
+  border: none;
+  height: 1px;
+background: linear-gradient(to right, transparent, #bbb, transparent);
+  width: 100vw;
+  margin: 0;
+}
+
+.animate-on-scroll {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.6s ease;
+}
+
+.animate-on-scroll.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+
+.form-box .hero-register-button {
+  color: white !important;
+  border: none !important;
+  padding: 0.9rem 2rem !important;
+  font-size: 1rem !important;
+  border-radius: 50px !important;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+  margin-top: 1rem;
+}
+.form-box .hero-register-button:hover {
+  transform: scale(1.05);
+}
+
+/* definizione già presente, la lasci intatta */
+@keyframes zoomPulse {
+  0%, 100% { transform: scale(1); }
+  50%       { transform: scale(1.05); }
+}
+
+/* applica l'animazione solo a quel titolo */
+#masterclass .section-title {
+  animation: zoomPulse 3s ease-in-out infinite;
+}
+
+
+
+
+/* Stile iniziale neutro */
+input {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  transition: border-color 0.3s, background-color 0.3s;
+}
+
+/* Quando il campo è obbligatorio e viene toccato ma non compilato */
+input:required:invalid:focus-visible {
+  outline: none;
+}
+
+/* Quando esce dal campo senza compilarlo */
+input:required:invalid:focus:not(:placeholder-shown) {
+}
+
+
+.testimonials-carousel-wrapper {
+  overflow: hidden;
+  max-width: 1000px;
+  margin: auto;
+  position: relative;
+}
+
+.testimonials-carousel {
+  display: flex;
+  width: 300%; /* 3 testimonianze */
+  transition: transform 0.6s ease-in-out;
+}
+
+.testimonial {
+  flex: 0 0 100%;
+  max-width: 100%;
+  min-height: 180px;
+  box-sizing: border-box;
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  padding: 1.5rem;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.testimonial > div {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.testimonial img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+
+.testimonials-carousel-wrapper {
+  overflow: hidden;
+  max-width: 1000px;
+  margin: auto;
+  position: relative;
+}
+
+.testimonials-carousel {
+  display: flex;
+  transition: transform 0.6s ease-in-out;
+  width: 300%; /* 3 testimonianze */
+}
+
+.testimonial {
+  flex: 0 0 100%;
+  max-width: 100%;
+  min-height: 180px;
+  box-sizing: border-box;
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  padding: 1.5rem;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  overflow: hidden;
+}
+
+.testimonial img {
+  flex-shrink: 0;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.testimonial > div {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  word-break: break-word;
+  overflow-wrap: break-word;
+}
+
+.achievements-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: center;
+}
+.achievements-row {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.top-row .achievement-card {
+  flex: 1 1 calc(33.333% - 1rem);
+  max-width: 300px;
+}
+.bottom-row .achievement-card {
+  flex: 1 1 calc(50% - 1rem);
+  max-width: 350px;
+}
+@media (max-width: 768px) {
+  .top-row .achievement-card,
+  .bottom-row .achievement-card {
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
+}
+
+.form-box .privacy {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.4rem;
+  font-size: 0.9rem;
+  margin-top: 1rem;
+  line-height: 1.4;
+  text-align: left;
+  justify-content: flex-start;
+  padding: 0.25rem 0;
+}
+
+.form-box .privacy input[type="checkbox"] {
+  margin-top: 0.3rem;
+  transform: scale(1.1);
+  margin-right: 0.4rem;
+}
+
+/* Palette rossa per Sofia Bozzoli */
+.hero {
+  background: linear-gradient(to bottom right, #FFF6F5, #FDEDEC);
+}
+.hero button,
+.form-box button {
+  background: linear-gradient(to right, #E74C3C, #C0392B);
+  color: white;
+  border: none;
+  padding: 0.9rem 2rem;
+  font-size: 1rem;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+.hero button:hover,
+.form-box button:hover {
+  transform: scale(1.05);
+  background: linear-gradient(to right, #C0392B, #922B21);
+}
+.testimonial {
+}
+.achievement-card {
+}
+
+.testimonial,
+.achievement-card {
+  background: #ffffff6b;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  transition: all 0.4s ease-in-out;
+}
+
+.testimonial:hover,
+.achievement-card:hover {
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+  transform: translateY(-4px); /* opzionale per dare un effetto "lift" */
+}
+
+
+#achievements {
+  background: linear-gradient(to bottom right, #f5f7fa, #e8edf3);
+  padding-bottom: 0;
+  margin-bottom: 0;
+}
+#testimonials {
+  padding-top: 4rem;
+}
+
+#achievements {
+  background: linear-gradient(to bottom right, #FFF6F5, #FDEDEC);
+  padding-bottom: 2rem;
+  margin-bottom: 0;
+}
+.section-divider {
+  border: none;
+  height: 2px;
+  background: #e0d2cf;
+  width: 80%;
+  margin: 2rem auto 0 auto;
+}
+
+.hero {
+  position: relative;
+  overflow: hidden;
+}
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('images/banner.png') no-repeat center center / cover;
+  opacity: 0.1;  /* molto tenue */
+  z-index: 0;
+  background-repeat: repeat-x;
+background-size: cover;
+animation: scroll-bg 40s linear infinite;
+}
+.hero > * {
+  position: relative;
+  z-index: 1;
+}
+
+@keyframes scroll-bg {
+  from { background-position: 0 0; }
+  to { background-position: -1000px 0; }
+}
+
+header nav a {
+  margin: 0 1rem;
+  text-decoration: none;
+  color: #444;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+header nav a:hover {
+  color: #C0392B; /* oppure #E74C3C */
+}
+
+#achievements {
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.104);
+}
+
+.about-img img {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.testimonial-cards {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.testimonial-card {
+  display: flex;
+  align-items: flex-start;
+  background: #ffffff0a;
+  border-radius: 12px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.125);
+  padding: 1.5rem;
+  gap: 1rem;
+}
+.testimonial-card:hover {
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.2);
+}
+.testimonial-card img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.testimonial-card .testimonial-text {
+  flex: 1;
+}
+
+.testimonial-card .testimonial-text p {
+  margin-bottom: 0.5rem;
+  font-style: italic;
+}
+
+@media (min-width: 768px) {
+  .testimonial-cards {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+#masterclass-wrapper {
+  background: linear-gradient(to bottom right, #FFF6F5, #FDEDEC);
+  width: 100%;
+  padding: 2rem 0;
+  border-radius: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08); /* <--- questa è la nuova proprietà */
+}
+
+.masterclass-inner {
+  max-width: 1000px;
+  margin: auto;
+  padding: 0 1rem;
+  border-radius: 20px;
+}
+
+.cta-section { 
+  background-color: transparent !important;
+}
+
+.underline-highlight {
+  text-decoration: underline;
+}
+
+</style>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "Sofia Bozzoli – Social Media Manager",
+  "description": "Scopri come diventare un Social Media Manager freelance con Sofia Bozzoli.",
+  "author": {
+    "@type": "Person",
+    "name": "Sofia Bozzoli"
+  },
+  "review": [
+    {
+      "@type": "Review",
+      "author": "Giorgia Girardi",
+      "reviewBody": "Mi sono licenziata da un lavoro che odiavo..."
+    },
+    {
+      "@type": "Review",
+      "author": "Enrico Cesari",
+      "reviewBody": "Ho mollato tutto e mi sono trasferito alle Canarie..."
+    },
+    {
+      "@type": "Review",
+      "author": "Camilla Valeriani",
+      "reviewBody": "Oggi lavoro da casa, mi godo la mia famiglia..."
+    }
+  ]
+}
+
+</script>
+</head>
+<body>
+<header>
+<div class="brand">Sofia Bozzoli</div>
+<nav>
+<a href="#about">Chi sono?</a>
+<a href="#achievements">Obiettivi</a>
+<a href="#testimonials">Testimonials</a>
+<a href="#masterclass">Accedi alla Masterclass</a>
+</nav>
+</header>
+
+<section class="hero">
+<div class="container">
+<h1>Social Media Manager: il lavoro che tutti vorrebbero ma nessuno ti insegna </h1>
+<p>Scopri come creare un lavoro stabile, indipendente da orari e luoghi grazie ai social media.</p>
+<p class="cta-bounce cta-spacing">Una vita con le tue regole, inizia da qui🚀</p>
+</div>
+<button onclick="document.getElementById('masterclass').scrollIntoView({behavior: 'smooth'})">Accedi ora alla Masterclass</button>
+</section>
+
+
+<hr class="section-divider animate-on-scroll"/>
+
+<section id="about">
+<h2 class="section-title">Chi sono?</h2>
+<div class="about-flex">
+<div class="about-img">
+<img alt="Sofia Bozzoli" loading="lazy" src="https://d1yei2z3i6k35z.cloudfront.net/11376860/67bcf7cb66882_IMG_4245copia.jpg"/>
+</div>
+<div class="about-text">
+<p>Ciao! Mi chiamo Sofia e sono la fondatrice di The Social Alchemy.
+Da oltre due anni aiuto giovani professionisti e aspiranti freelance a trasformare la loro passione per i social in un’attività indipendente, che li renda liberi di lavorare ovunque e vivere secondo i propri ritmi.
+
+Dopo aver lasciato un lavoro che non mi rappresentava, ho costruito il mio metodo basato sull’autenticità, che mi ha permesso di gestire i social di liberi professionisti e brand internazionali viaggiando tra Europa e Oriente.
+
+Oggi il mio lavoro è la mia libertà: ho creato un business su misura per me, seguendo i miei sogni, non quelli imposti dagli altri. E ora voglio aiutarti a fare lo stesso.</p>
+<br/>
+<p>Ho preparato una masterclass completamente gratuita in cui ti guiderò passo dopo passo per iniziare la tua carriera da Social Media Manager freelance.
+Scoprirai come costruire un lavoro stabile, flessibile e davvero indipendente – senza vincoli di orari o di luogo.
+
+È un contenuto pratico e concreto, pensato per darti le basi giuste, aiutarti a trovare i primi clienti e trasformare una passione in una vera professione.</p>
+</div>
+</div>
+</section>
+<hr class="section-divider animate-on-scroll"/>
+<section id="achievements">
+<h2 class="section-title">Cosa otterrai con questa Masterclass?</h2><div class="achievements-grid"><div class="achievements-row top-row"><div class="achievement-card"><span class="achievement-icon">✅</span><p>Come trovare i primi clienti! (Anche se parti da zero)</p></div><div class="achievement-card"><span class="achievement-icon">🛠️</span><p>Quali competenze servono davvero (e quali no!) per lavorare come SMM</p></div><div class="achievement-card"><span class="achievement-icon">💰</span><p>Come evitare di essere sottopagato e creare offerte che vendono</p></div></div><div class="achievements-row bottom-row"><div class="achievement-card"><span class="achievement-icon">📈</span><p>La strategia per costruire una presenza online che ti porta clienti in automatico</p></div><div class="achievement-card"><span class="achievement-icon">❌</span><p>Errori comuni dei freelance alle prime armi (e come evitarli)</p></div></div></div>
+<hr class="section-divider animate-on-scroll"/></section><hr class="section-divider animate-on-scroll"/>
+<hr class="section-divider animate-on-scroll"/>
+
+<section id="testimonials">
+<h2 class="section-title">Cosa dicono di me?</h2>
+<div class="testimonial-cards">
+  <div class="testimonial-card">
+    <img src="https://d1yei2z3i6k35z.cloudfront.net/11376860/67ce307168470_Screenshot2025-03-10alle01.20.04.png" alt="Giorgia Girardi" loading="lazy">
+    <div class="testimonial-text">
+      <p>"Mi sono licenziata da un lavoro che odiavo e oggi sono la più richiesta nel mio settore come SMM. Gestisco i miei clienti con passione e finalmente mi sento realizzata. Questo percorso mi ha cambiato la vita."</p>
+      <br>
+      <small>- Giorgia Girardi</small>
+    </div>
+  </div>
+
+  <div class="testimonial-card">
+    <img src="https://d1yei2z3i6k35z.cloudfront.net/11376860/67ce309b8135e_Screenshot2025-03-10alle01.18.42.png" alt="Enrico Cesari" loading="lazy">
+    <div class="testimonial-text">
+      <p>"Ho mollato tutto e mi sono trasferito alle Canarie. Ora lavoro da dove voglio, con chi voglio. Questo non è solo un corso, è una porta aperta verso la libertà. Una delle migliori decisioni della mia vita!"</p>
+      <br> <br>
+      <small>- Enrico Cesari</small>
+    </div>
+  </div>
+
+  <div class="testimonial-card">
+    <img src="https://d1yei2z3i6k35z.cloudfront.net/11376860/67ce30c090cd4_Screenshot2025-03-10alle01.17.39.png" alt="Camilla Valeriani" loading="lazy">
+    <div class="testimonial-text">
+      <p>"Oggi lavoro da casa, mi godo la mia famiglia ogni giorno e ricevo proposte di collaborazioni dai brand. Non pensavo fosse possibile fino a quando non ho iniziato questo percorso. Grazie Sofia, ti sceglierei ancora!"</p>
+      <small>- Camilla Valeriani</small>
+    </div>
+  </div>
+</div>
+
+</section>
+
+<hr class="section-divider animate-on-scroll"/>
+<section id="masterclass-wrapper"><div class="masterclass-inner"><section id="masterclass">
+<h2 class="section-title">✅ Accedi alla Masterclass Gratuita 👇</h2>
+<div class="form-box">
+<input oninput="this.setCustomValidity('')" oninvalid="this.setCustomValidity('Inserisci il tuo nome')" placeholder="Nome" required="" type="text"/>
+<input oninput="this.setCustomValidity('')" oninvalid="this.setCustomValidity('Inserisci il tuo nome')" placeholder="Cognome" required="" type="text"/>
+<input oninput="this.setCustomValidity('')" oninvalid="this.setCustomValidity('Inserisci un indirizzo email valido')" placeholder="Email" required="" type="email"/>
+<input oninput="this.setCustomValidity('')" oninvalid="this.setCustomValidity('Inserisci un numero di telefono valido')" pattern="\+?[0-9\s]+" placeholder="Numero di telefono" required="" type="tel"/>
+<!-- Checkbox GDPR -->
+<div class="privacy">
+<input id="gdprConsent" type="checkbox"/>
+<label for="gdprConsent">
+      Autorizzo il trattamento dei miei dati personali ai sensi del D.Lgs. 196/2003 e del Regolamento UE 2016/679 (GDPR).
+    </label>
+</div>
+<!-- Pulsante “Registrati ora” disabilitato inizialmente -->
+<button class="hero-register-button" disabled="" id="registerBtn" onclick="formFeedback()">
+    Registrati ora 🚀
+  </button>
+</div>
+</section></div></section>
+
+<section class="cta-section" id="about">
+<h2 class="section-title">La tua nuova carriera parte da qui.</h2>
+<div class="about-text">
+<p>Scopri come diventare un Social Media Manager freelance <br> con la mia masterclass gratuita.  
+<br> Non servono competenze tecniche né esperienza: <span class="underline-highlight">ti insegno io da zero.</span></p>
+
+</div>
+</section>
+<footer>
+    © Sofia Bozzoli | Social Media Manager. Tutti i diritti riservati.
+  </footer>
+<style>
+  /* toast base */
+.toast {
+  position: fixed;
+  bottom: 1.5rem;
+  right: 1.5rem;
+  background: #b60303;
+  color: #fff;
+  padding: 1rem 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.4s ease, transform 0.4s ease;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  max-width: 300px;
+  font-size: 0.95rem;
+  z-index: 10000;
+}
+/* quando visibile */
+.toast.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+/* pulsante di chiusura */
+.toast-close {
+  background: transparent;
+  border: none;
+  color: #fff;
+  font-size: 1.2rem;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.testimonial {
+  flex: 0 0 100%;
+  scroll-snap-align: start;
+  padding: 2rem;
+  box-sizing: border-box;
+}
+.testimonials-carousel {
+  display: flex;
+  transition: transform 0.6s ease-in-out;
+  will-change: transform;
+    }
+  .testimonials-carousel::-webkit-scrollbar {
+    display: none; /* Chrome, Safari */
+    }  
+
+.carousel-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: white;
+  border: 2px solid #00b4d8;
+  color: #00b4d8;
+  font-size: 1.5rem;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  transition: background 0.3s, color 0.3s;
+  z-index: 10;
+}
+.carousel-arrow:hover {
+  background-color: #00b4d8;
+  color: white;
+}
+.carousel-arrow.left {
+  left: 0px;
+}
+.carousel-arrow.right {
+  right: 0px;
+}
+
+.cta-button {
+  background: linear-gradient(to right, #0077cc, #00b4d8);
+  color: white;
+  border: none;
+  padding: 0.9rem 2rem;
+  font-size: 1rem;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  width: 100%;
+  display: block;
+  margin-top: 1rem;
+}
+
+.cta-button:hover {
+  transform: scale(1.05);
+}
+
+/* stato “non cliccabile” */
+.hero-register-button:disabled {
+  opacity: 0.5;           /* attenua il colore */
+  cursor: not-allowed;    /* icona del divieto */
+  pointer-events: none;   /* disabilita hover/click */
+}
+
+/* stato “cliccabile” */
+.hero-register-button:not(:disabled) {
+  opacity: 1;
+  cursor: pointer;
+}
+
+.cta-section {
+  text-align: center;
+  padding: 4rem 2rem;
+  background: #fdfdfd; /* oppure background-color: #fff; */
+  animation: fadeIn 1.5s ease;
+  width: 100%;
+  max-width: none;
+}
+
+
+.cta-section .section-title {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.cta-section .about-text {
+  max-width: 700px;
+  margin: 0 auto;
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: #444;
+}
+
+.cta-bounce {
+  animation: bounceUpDown 2s ease-in-out infinite;
+  display: inline-block;
+  font-weight: 600;
+  text-decoration: underline; /* 👈 aggiunto */
+}
+
+@keyframes bounceUpDown {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.cta-spacing {
+  margin-bottom: 0.2rem; /* Riduci se vuoi meno spazio */
+}
+
+</style>
+<script>
+  // Animazione sezione in viewport
+  const sections = document.querySelectorAll('section');
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
+    });
+  }, { threshold: 0.1 });
+  sections.forEach(section => observer.observe(section));
+
+  // Form feedback
+  function formFeedback() {
+    showToast("📫 Grazie per la registrazione! Riceverai presto la masterclass gratuita via email.");
+  }
+
+
+  // Carosello testimonials
+const carousel = document.getElementById('carousel');
+  const indicators = document.querySelectorAll('.carousel-indicators button');
+  let currentIndex = 0;
+  const slideCount = carousel.children.length;
+
+  function updateCarousel() {
+    const offset = currentIndex * 100;
+    carousel.style.transform = `translateX(-${offset}%)`;
+    indicators.forEach((btn, idx) => {
+      btn.classList.toggle('active', idx === currentIndex);
+    });
+  }
+
+  function nextSlide() {
+    currentIndex = (currentIndex + 1) % slideCount;
+    updateCarousel();
+  }
+
+  function prevSlide() {
+    currentIndex = (currentIndex - 1 + slideCount) % slideCount;
+    updateCarousel();
+  }
+
+  function goToSlide(index) {
+    currentIndex = index;
+    updateCarousel();
+  }
+
+  setInterval(nextSlide, 4000);
+  updateCarousel();
+
+// Pause autoplay on hover
+let slideTimer = setInterval(nextSlide, 4000);
+const carouselEl = document.getElementById('carousel');
+carouselEl.addEventListener('mouseenter', () => clearInterval(slideTimer));
+carouselEl.addEventListener('mouseleave', () => slideTimer = setInterval(nextSlide, 4000));
+// Touch swipe
+let startX=0;
+carouselEl.addEventListener('touchstart', e => startX = e.touches[0].clientX);
+carouselEl.addEventListener('touchend', e => {
+  const endX = e.changedTouches[0].clientX;
+  if (endX - startX > 50) prevSlide();
+  if (startX - endX > 50) nextSlide();
+});
+
+function showToast(msg) {
+  const t = document.getElementById("toast");
+  t.querySelector(".toast-message").textContent = msg;
+  t.classList.add("show");
+  // auto‐nascondi dopo 4s
+  setTimeout(() => t.classList.remove("show"), 4000);
+}
+
+// chiusura manuale
+document.querySelector("#toast .toast-close")
+        .addEventListener("click", () => {
+  document.getElementById("toast").classList.remove("show");
+});
+
+</script>
+<div class="toast" id="toast">
+<span class="toast-message"></span>
+<button class="toast-close">×</button>
+</div>
+<script>
+  const gdprCheckbox = document.getElementById('gdprConsent');
+  const registerBtn  = document.getElementById('registerBtn');
+
+  gdprCheckbox.addEventListener('change', () => {
+    registerBtn.disabled = !gdprCheckbox.checked;
+  });
+</script>
+</body>
+</html>
