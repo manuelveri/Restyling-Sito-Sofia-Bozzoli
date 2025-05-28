@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html lang="it">
 <head>
 <meta charset="utf-8"/>
@@ -9,6 +10,11 @@
 <title>Sofia Bozzoli – Social Media Manager</title>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&amp;display=swap" rel="stylesheet"/>
 <style>
+html, body {
+  overflow-x: hidden;
+  max-width: 100vw;
+}
+
 * { margin: 0; padding: 0; box-sizing: border-box; scroll-behavior: smooth; }
 body {
   font-family: 'Montserrat', sans-serif;
@@ -582,9 +588,54 @@ header nav a:hover {
   text-decoration: underline;
 }
 
-</style>
 
-<script type="application/ld+json">
+@media (max-width: 768px) {
+  header nav {
+    display: none;
+    flex-direction: column;
+    background: white;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    text-align: center;
+    padding: 1rem 0;
+  }
+
+  header.nav-open nav {
+    display: flex;
+  }
+
+  .hamburger {
+    display: block;
+    cursor: pointer;
+    margin-left: auto;
+  }
+}
+
+.form-box .privacy {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+  font-size: 0.9rem;
+  line-height: 1.4;
+  text-align: left;
+  justify-content: flex-start;
+  padding: 0.5rem 0;
+  margin-left: 0;
+}
+
+.form-box .privacy input[type="checkbox"] {
+  margin-top: 0.3rem;
+  transform: scale(1.1);
+  margin-right: 0.5rem;
+}
+</style>
+<script>
+function toggleNav() {
+  document.querySelector('header').classList.toggle('nav-open');
+}
+</script><script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "WebPage",
@@ -616,7 +667,7 @@ header nav a:hover {
 </script>
 </head>
 <body>
-<header>
+<header><div class="hamburger" onclick="toggleNav()">☰</div>
 <div class="brand">Sofia Bozzoli</div>
 <nav>
 <a href="#about">Chi sono?</a>
@@ -625,7 +676,6 @@ header nav a:hover {
 <a href="#masterclass">Accedi alla Masterclass</a>
 </nav>
 </header>
-
 <section class="hero">
 <div class="container">
 <h1>Social Media Manager: il lavoro che tutti vorrebbero ma nessuno ti insegna </h1>
@@ -634,10 +684,7 @@ header nav a:hover {
 </div>
 <button onclick="document.getElementById('masterclass').scrollIntoView({behavior: 'smooth'})">Accedi ora alla Masterclass</button>
 </section>
-
-
 <hr class="section-divider animate-on-scroll"/>
-
 <section id="about">
 <h2 class="section-title">Chi sono?</h2>
 <div class="about-flex">
@@ -664,39 +711,34 @@ Scoprirai come costruire un lavoro stabile, flessibile e davvero indipendente �
 <h2 class="section-title">Cosa otterrai con questa Masterclass?</h2><div class="achievements-grid"><div class="achievements-row top-row"><div class="achievement-card"><span class="achievement-icon">✅</span><p>Come trovare i primi clienti! (Anche se parti da zero)</p></div><div class="achievement-card"><span class="achievement-icon">🛠️</span><p>Quali competenze servono davvero (e quali no!) per lavorare come SMM</p></div><div class="achievement-card"><span class="achievement-icon">💰</span><p>Come evitare di essere sottopagato e creare offerte che vendono</p></div></div><div class="achievements-row bottom-row"><div class="achievement-card"><span class="achievement-icon">📈</span><p>La strategia per costruire una presenza online che ti porta clienti in automatico</p></div><div class="achievement-card"><span class="achievement-icon">❌</span><p>Errori comuni dei freelance alle prime armi (e come evitarli)</p></div></div></div>
 <hr class="section-divider animate-on-scroll"/></section><hr class="section-divider animate-on-scroll"/>
 <hr class="section-divider animate-on-scroll"/>
-
 <section id="testimonials">
 <h2 class="section-title">Cosa dicono di me?</h2>
 <div class="testimonial-cards">
-  <div class="testimonial-card">
-    <img src="https://d1yei2z3i6k35z.cloudfront.net/11376860/67ce307168470_Screenshot2025-03-10alle01.20.04.png" alt="Giorgia Girardi" loading="lazy">
-    <div class="testimonial-text">
-      <p>"Mi sono licenziata da un lavoro che odiavo e oggi sono la più richiesta nel mio settore come SMM. Gestisco i miei clienti con passione e finalmente mi sento realizzata. Questo percorso mi ha cambiato la vita."</p>
-      <br>
-      <small>- Giorgia Girardi</small>
-    </div>
-  </div>
-
-  <div class="testimonial-card">
-    <img src="https://d1yei2z3i6k35z.cloudfront.net/11376860/67ce309b8135e_Screenshot2025-03-10alle01.18.42.png" alt="Enrico Cesari" loading="lazy">
-    <div class="testimonial-text">
-      <p>"Ho mollato tutto e mi sono trasferito alle Canarie. Ora lavoro da dove voglio, con chi voglio. Questo non è solo un corso, è una porta aperta verso la libertà. Una delle migliori decisioni della mia vita!"</p>
-      <br> <br>
-      <small>- Enrico Cesari</small>
-    </div>
-  </div>
-
-  <div class="testimonial-card">
-    <img src="https://d1yei2z3i6k35z.cloudfront.net/11376860/67ce30c090cd4_Screenshot2025-03-10alle01.17.39.png" alt="Camilla Valeriani" loading="lazy">
-    <div class="testimonial-text">
-      <p>"Oggi lavoro da casa, mi godo la mia famiglia ogni giorno e ricevo proposte di collaborazioni dai brand. Non pensavo fosse possibile fino a quando non ho iniziato questo percorso. Grazie Sofia, ti sceglierei ancora!"</p>
-      <small>- Camilla Valeriani</small>
-    </div>
-  </div>
+<div class="testimonial-card">
+<img alt="Giorgia Girardi" loading="lazy" src="https://d1yei2z3i6k35z.cloudfront.net/11376860/67ce307168470_Screenshot2025-03-10alle01.20.04.png"/>
+<div class="testimonial-text">
+<p>"Mi sono licenziata da un lavoro che odiavo e oggi sono la più richiesta nel mio settore come SMM. Gestisco i miei clienti con passione e finalmente mi sento realizzata. Questo percorso mi ha cambiato la vita."</p>
+<br/>
+<small>- Giorgia Girardi</small>
 </div>
-
+</div>
+<div class="testimonial-card">
+<img alt="Enrico Cesari" loading="lazy" src="https://d1yei2z3i6k35z.cloudfront.net/11376860/67ce309b8135e_Screenshot2025-03-10alle01.18.42.png"/>
+<div class="testimonial-text">
+<p>"Ho mollato tutto e mi sono trasferito alle Canarie. Ora lavoro da dove voglio, con chi voglio. Questo non è solo un corso, è una porta aperta verso la libertà. Una delle migliori decisioni della mia vita!"</p>
+<br/> <br/>
+<small>- Enrico Cesari</small>
+</div>
+</div>
+<div class="testimonial-card">
+<img alt="Camilla Valeriani" loading="lazy" src="https://d1yei2z3i6k35z.cloudfront.net/11376860/67ce30c090cd4_Screenshot2025-03-10alle01.17.39.png"/>
+<div class="testimonial-text">
+<p>"Oggi lavoro da casa, mi godo la mia famiglia ogni giorno e ricevo proposte di collaborazioni dai brand. Non pensavo fosse possibile fino a quando non ho iniziato questo percorso. Grazie Sofia, ti sceglierei ancora!"</p>
+<small>- Camilla Valeriani</small>
+</div>
+</div>
+</div>
 </section>
-
 <hr class="section-divider animate-on-scroll"/>
 <section id="masterclass-wrapper"><div class="masterclass-inner"><section id="masterclass">
 <h2 class="section-title">✅ Accedi alla Masterclass Gratuita 👇</h2>
@@ -718,13 +760,11 @@ Scoprirai come costruire un lavoro stabile, flessibile e davvero indipendente �
   </button>
 </div>
 </section></div></section>
-
 <section class="cta-section" id="about">
 <h2 class="section-title">La tua nuova carriera parte da qui.</h2>
 <div class="about-text">
-<p>Scopri come diventare un Social Media Manager freelance <br> con la mia masterclass gratuita.  
-<br> Non servono competenze tecniche né esperienza: <span class="underline-highlight">ti insegno io da zero.</span></p>
-
+<p>Scopri come diventare un Social Media Manager freelance <br/> con la mia masterclass gratuita.  
+<br/> Non servono competenze tecniche né esperienza: <span class="underline-highlight">ti insegno io da zero.</span></p>
 </div>
 </section>
 <footer>
