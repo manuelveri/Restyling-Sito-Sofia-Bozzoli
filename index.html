@@ -672,11 +672,7 @@ function toggleNav() {
 
   <header>
   <div class="brand">Sofia Bozzoli</div>
-  
-  <!-- Hamburger per mobile -->
-  <button class="menu-toggle" onclick="toggleMenu()">☰</button>
-
-  <nav id="navbar" class="mobile-hidden">
+  <nav id="navbar">
     <a href="#about">Chi sono?</a>
     <a href="#achievements">Cosa otterrai</a>
     <a href="#testimonials">Testimonials</a>
@@ -1062,29 +1058,12 @@ document.querySelector("#toast .toast-close")
   document.getElementById("toast").classList.remove("show");
 });
 
-function toggleMenu() {
-  const nav = document.getElementById("navbar");
-  nav.classList.toggle("mobile-hidden");
-  nav.classList.toggle("mobile-visible");
-}
 
 </script>
 <div class="toast" id="toast">
 <span class="toast-message"></span>
 <button class="toast-close">×</button>
 </div>
-
-<script>
-  document.addEventListener("DOMContentLoaded", function() {
-    const menuToggle = document.getElementById("menu-toggle");
-    const navMenu = document.getElementById("mobile-menu");
-    if(menuToggle && navMenu) {
-      menuToggle.addEventListener("click", function() {
-        navMenu.classList.toggle("hidden");
-      });
-    }
-  });
-</script>
 
 </body>
 </html>
