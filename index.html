@@ -126,12 +126,7 @@ section.visible {
 }
 .form-box button:hover {
 }
-.form-box .privacy {
-  display: flex;
-  align-items: center;
-  font-size: 0.9rem;
-  margin-top: 1rem;
-}
+
 .about-flex {
   display: flex;
   flex-wrap: wrap;
@@ -674,15 +669,21 @@ function toggleNav() {
 </script>
 </head>
 <body>
-<header><div class="hamburger" onclick="toggleNav()">☰</div>
-<div class="brand">Sofia Bozzoli</div>
-<nav>
-<a href="#about">Chi sono?</a>
-<a href="#achievements">Obiettivi</a>
-<a href="#testimonials">Testimonials</a>
-<a href="#masterclass">Accedi alla Masterclass</a>
-</nav>
+
+  <header>
+  <div class="brand">Sofia Bozzoli</div>
+  
+  <!-- Hamburger per mobile -->
+  <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+
+  <nav id="navbar" class="mobile-hidden">
+    <a href="#about">Chi sono?</a>
+    <a href="#achievements">Cosa otterrai</a>
+    <a href="#testimonials">Testimonials</a>
+    <a href="#masterclass">Accedi alla Masterclass</a>
+  </nav>
 </header>
+
 <section class="hero">
 <div class="container">
 <h1>Social Media Manager: il lavoro che tutti vorrebbero ma nessuno ti insegna </h1>
@@ -754,17 +755,11 @@ Scoprirai come costruire un lavoro stabile, flessibile e davvero indipendente �
 <input oninput="this.setCustomValidity('')" oninvalid="this.setCustomValidity('Inserisci il tuo nome')" placeholder="Cognome" required="" type="text"/>
 <input oninput="this.setCustomValidity('')" oninvalid="this.setCustomValidity('Inserisci un indirizzo email valido')" placeholder="Email" required="" type="email"/>
 <input oninput="this.setCustomValidity('')" oninvalid="this.setCustomValidity('Inserisci un numero di telefono valido')" pattern="\+?[0-9\s]+" placeholder="Numero di telefono" required="" type="tel"/>
-<!-- Checkbox GDPR -->
-<div class="privacy">
-<input id="gdprConsent" type="checkbox"/>
-<label for="gdprConsent">
-      Autorizzo il trattamento dei miei dati personali ai sensi del D.Lgs. 196/2003 e del Regolamento UE 2016/679 (GDPR).
-    </label>
-</div>
+
 <!-- Pulsante “Registrati ora” disabilitato inizialmente -->
-<button class="hero-register-button" disabled="" id="registerBtn" onclick="formFeedback()">
-    Registrati ora 🚀
-  </button>
+<button class="hero-register-button" id="registerBtn" onclick="formFeedback()">
+  Registrati ora 🚀
+</button>
 </div>
 </section></div></section>
 <section class="cta-section" id="about">
@@ -777,6 +772,7 @@ Scoprirai come costruire un lavoro stabile, flessibile e davvero indipendente �
 <footer>
     © Sofia Bozzoli | Social Media Manager. Tutti i diritti riservati.
   </footer>
+
 <style>
   /* toast base */
 .toast {
@@ -932,6 +928,61 @@ Scoprirai come costruire un lavoro stabile, flessibile e davvero indipendente �
   margin-bottom: 0.2rem; /* Riduci se vuoi meno spazio */
 }
 
+/* Base stile navbar */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+nav a {
+  margin: 0 1rem;
+  text-decoration: none;
+  color: #444;
+  font-weight: 600;
+}
+
+/* Bottone hamburger (solo mobile) */
+.menu-toggle {
+  display: none;
+  font-size: 1.8rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* Mobile layout */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  nav {
+    width: 100%;
+    flex-direction: column;
+    text-align: center;
+    background: #fff0f0;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: max-height 0.3s ease-out;
+    overflow: hidden;
+  }
+
+  .mobile-hidden {
+    max-height: 0;
+  }
+
+  .mobile-visible {
+    max-height: 300px;
+  }
+
+  nav a {
+    padding: 1rem 0;
+    display: block;
+    border-top: 1px solid #f3caca;
+  }
+}
+
 </style>
 <script>
   // Animazione sezione in viewport
@@ -1011,18 +1062,16 @@ document.querySelector("#toast .toast-close")
   document.getElementById("toast").classList.remove("show");
 });
 
+function toggleMenu() {
+  const nav = document.getElementById("navbar");
+  nav.classList.toggle("mobile-hidden");
+  nav.classList.toggle("mobile-visible");
+}
+
 </script>
 <div class="toast" id="toast">
 <span class="toast-message"></span>
 <button class="toast-close">×</button>
 </div>
-<script>
-  const gdprCheckbox = document.getElementById('gdprConsent');
-  const registerBtn  = document.getElementById('registerBtn');
-
-  gdprCheckbox.addEventListener('change', () => {
-    registerBtn.disabled = !gdprCheckbox.checked;
-  });
-</script>
 </body>
 </html>
